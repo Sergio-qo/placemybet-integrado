@@ -28,6 +28,7 @@ class navBar extends React.Component {
   render(){
     return (
       <View>
+        
       </View>
     );
   }
