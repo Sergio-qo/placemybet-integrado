@@ -19,7 +19,7 @@ import {
 
 import {FontAwesome5} from '@expo/vector-icons'
 
-class navBar extends React.Component {
+class NavBar extends React.Component {
     render() {
         return (
             <View style={{flex: 1}}>
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default navBar;
+export default NavBar;
