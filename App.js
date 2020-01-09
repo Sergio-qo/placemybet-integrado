@@ -6,7 +6,8 @@
  * @flow
  */
 
-import React from 'react';
+import React, {Component} from 'react';
+import NavBar from './components/NavBar';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,11 +25,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-class navBar extends React.Component {
+export default class App extends Component {
   render(){
     return (
       <View>
-        
+        <NavBar/>
       </View>
     );
   }
@@ -74,4 +75,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;

@@ -7,28 +7,29 @@ import {
     Text,
     StatusBar,
     TouchableOpacity,
+    DrawerLayoutAndroid
 } from 'react-native';
 
-import {
-    Header,
-    LearnMoreLinks,
-    Colors,
-    DebugInstructions,
-    ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-import {FontAwesome5} from '@expo/vector-icons'
 
 class NavBar extends React.Component {
     render() {
-        return (
-            <View style={{flex: 1}}>
-                <TouchableOpacity style={{alignItems: "flex-end", margin: 16}}
-                 onPress={this.props.navigation.openDrawer}>
-                     <FontAwesome5 name="bars" size={24} color="black"/>
-                 </TouchableOpacity>
+        var navigationView = (
+            <View style={{flex: 1, backgroundColor: '#fff'}}>
+              <Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}>I'm in the Drawer!</Text>
             </View>
-        );
+          );
+          return (
+            <DrawerLayoutAndroid
+              drawerWidth={300}
+              drawerPosition="left"
+              renderNavigationView={() => navigationView}>
+              <View style={{flex: 1, alignItems: 'center'}}>
+                <Text style={{margin: 10, fontSize: 15, textAlign: 'right'}}>Hello</Text>
+                <Text style={{margin: 10, fontSize: 15, textAlign: 'right'}}>World!</Text>
+              </View>
+              {this.props.view}
+            </DrawerLayoutAndroid>
+          );
     }
 };
 
